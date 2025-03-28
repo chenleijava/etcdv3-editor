@@ -62,14 +62,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 项目概览
 
-欢迎体验 **Project Name**，一个开源的全栈应用程序，旨在提供高效且可扩展的解决方案！后端基于 **go-zero**
+欢迎体验 **ETCD V3 EDITOR**，一个开源的全栈应用程序，旨在提供高效且可扩展的解决方案！后端基于 **go-zero**
 构建，这是一个高性能微服务框架；前端采用 **Ant Design Pro**，提供现代化、直观的用户界面。无论你是开发者还是贡献者，我们都很高兴欢迎你的加入！
 
 ### 特性
 
-- **后端**: 基于 go-zero，支持统一的返回结构（详见 [go-zero 文档](https://go-zero.dev/docs/tutorials/cli/template)）。
+- **后端**: 基于 go-zero，支持统一的数据结构返回，（详见 [go-zero 文档](https://go-zero.dev/docs/tutorials/cli/template)
+  ），进行了模板改造针对 zero,结构如下。
+
+```json
+{
+   "code": 0,
+   "msg": "",
+   "data": {}
+}
+```
 - **前端**: 采用 Ant Design Pro，打造流畅、响应式的用户体验。
-- **部署方式**: 支持前后端分离部署、Docker 和 Electron。
+- **部署方式**: 支持前后端分离部署、Docker 和 Electron，Docker-Compose.yml。
 - **内嵌构建**: 运行 `yarn spa`，前端编译产物将内嵌到后端路径 `backend/etc/dist`。
 - **配置文件**: 后端配置文件位于 `backend/etc`，默认账户：`admin` / `admin`。
 - **自动化工具**: 提供 `Makefile`，用于快速生成 API。
