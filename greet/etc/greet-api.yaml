@@ -1,0 +1,59 @@
+#service.ServiceConf
+Name: greet-api
+Mode: dev
+Log:
+  Mode: console
+  Encoding: json
+  Compress: true
+  Level: info
+
+
+Prometheus:
+  Port: 9101
+Telemetry:
+  Batcher: jaeger
+
+
+#rest RestConf
+Host: 0.0.0.0
+Port: 4399
+Verbose: true
+MaxConns: 10000 #http同时可接受最大请求数（限流数），默认10000
+
+
+#auth
+Auth:
+  AccessSecret: qewqweqwe
+  AccessExpire: 6
+
+#mysql
+Mysql:
+  DataSource: root:123456@tcp(127.0.0.1:3306)/clzz
+
+#redis config
+CacheRedis:
+  - Host: 127.0.0.1:6379
+    Type: node
+    Weight: 100
+    Pass:
+
+
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  User: root
+  Pass: '123456'
+  Key: rpcServer
+
+
+
+##user rpc 客户端通过 key 获取 etcd 上的远程服务进行调用
+UserRpc:
+  Etcd:
+    Key: user.rpc.service
+
+
+
+
+## extra
+AABB: 测试AABB

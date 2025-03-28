@@ -1,0 +1,100 @@
+syntax = "v1"
+
+// LoginRequest: 登录请求
+type LoginRequest {
+	// Username: 用户名
+	Username string `json:"username"`
+	// Password: 密码
+	Password string `json:"password"`
+}
+
+// LoginResponse: 登录响应
+type LoginResponse {
+	Token string `json:"token"`
+}
+
+// GetRequest: 获取键值请求
+type GetRequest {
+	// Key: Etcd 键
+	Key string `form:"key"`
+}
+
+// GetResponse: 获取键值响应
+type GetResponse {
+	// Value: 键的值
+	Value string `json:"value"`
+	// CreateRevision: 创建修订版本
+	CreateRevision int64 `json:"createRevision"`
+	// ModRevision: 修改修订版本
+	ModRevision int64 `json:"modRevision"`
+	// Version: 版本
+	Version int64 `json:"version"`
+	// Lease: 租约
+	Lease int64 `json:"lease"`
+}
+
+// PutRequest: 存储键值请求
+type PutRequest {
+	// Key: Etcd 键
+	Key string `json:"key"`
+	// Value: 键的值
+	Value string `json:"value"`
+}
+
+// PutResponse: 存储键值响应
+type PutResponse {
+	// Success: 操作是否成功
+	Success bool `json:"success"`
+}
+
+// DeleteRequest: 删除键请求
+type DeleteRequest {
+	// Key: Etcd 键
+	Key string `form:"key"`
+}
+
+// DeleteResponse: 删除键响应
+type DeleteResponse {
+	// Success: 操作是否成功
+	Success bool `json:"success"`
+}
+
+// ListRequest: 列出键请求
+type ListRequest {
+	// Prefix: Etcd 键的前缀，用于筛选以该前缀开头的键
+	Prefix string `form:"prefix"`
+}
+
+// ListResponse: 列出键响应
+type ListResponse {
+	// Keys: 键列表
+	Keys []string `json:"keys"`
+}
+
+@server (
+	group: auth
+)
+service EtcdWebTool {
+	@handler Login
+	post /api/login (LoginRequest) returns (LoginResponse)
+}
+
+@server (
+	group: etcd
+	jwt: Auth
+	middleware: UserAgentMiddleware
+)
+service EtcdWebTool {
+	@handler GetKey
+	get /api/etcd/get (GetRequest) returns (GetResponse)
+
+	@handler PutKey
+	post /api/etcd/put (PutRequest) returns (PutResponse)
+
+	@handler DeleteKey
+	delete /api/etcd/delete (DeleteRequest) returns (DeleteResponse)
+
+	@handler ListKeys
+	get /api/etcd/list (ListRequest) returns (ListResponse)
+}
+

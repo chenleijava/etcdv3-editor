@@ -1,0 +1,123 @@
+syntax = "v1"
+
+info (
+	title:   "api 文件完整示例写法"
+	desc:    "演示如何编写 api 文件"
+	author:  "keson.an"
+	date:    "2022 年 12 月 26 日"
+	version: "v1"
+)
+
+type (
+	UserLoginReq {
+		UserName string `json:"userName"`
+		Password string `json:"password"`
+	}
+	UserLoginResp {
+		Token string `json:"token"`
+	}
+	UserInfoReq {
+		UserName string `json:"userName"`
+		Password string `json:"password"`
+	}
+	UserInfoResp {
+		UserName string `json:"userName"`
+		Password string `json:"password"`
+		Payload  string `json:"payload"`
+	}
+	UserInfoUpdateReq  {}
+	UserInfoUpdateResp  {}
+)
+
+type (
+	UserRoleReq  {}
+	UserRoleResp  {}
+	UserRoleUpdateReq  {}
+	UserRoleUpdateResp  {}
+	UserRoleAddReq  {}
+	UserRoleAddResp  {}
+	UserRoleDeleteReq  {}
+	UserRoleDeleteResp  {}
+)
+
+type (
+	UserClassReq  {}
+	UserClassResp  {}
+	UserClassUpdateReq  {}
+	UserClassUpdateResp  {}
+	UserClassAddReq  {}
+	UserClassAddResp  {}
+	UserClassDeleteReq  {}
+	UserClassDeleteResp  {}
+)
+
+// user
+@server (
+	prefix: /v1
+	group:  user
+)
+service user-api {
+	@handler UserLogin
+	post /user/login (UserLoginReq) returns (UserLoginResp)
+
+	@handler UserInfoUpdate
+	post /user/info/update (UserInfoUpdateReq) returns (UserInfoUpdateResp)
+
+	@handler UserList
+	get /user/list returns ([]UserInfoResp)
+}
+
+@server (
+	jwt:    Auth // 开启 jwt 认证 ，默认的 rest.WithJwt 使用 HMAC，可以基于中间件，采用 RSA 进行处理
+	prefix: /v1
+	group:  user
+)
+service user-api {
+	@handler userInfo
+	post /user/info (UserInfoReq) returns (UserInfoResp)
+}
+
+// role
+@server (
+	prefix: /v1
+	group:  role
+)
+service user-api {
+	@handler UserRoleList
+	get /user/role/list returns ([]UserRoleResp)
+
+	@handler UserRoleUpdate
+	get /user/role/update (UserRoleUpdateReq) returns (UserRoleUpdateResp)
+
+	@handler UserRoleInfo
+	get /user/role/info (UserRoleReq) returns (UserRoleResp)
+
+	@handler UserRoleAdd
+	get /user/role/add (UserRoleAddReq) returns (UserRoleAddResp)
+
+	@handler UserRoleDelete
+	get /user/role/delete (UserRoleDeleteReq) returns (UserRoleDeleteResp)
+}
+
+// class
+@server (
+	prefix: /v1
+	group:  class
+)
+service user-api {
+	@handler UserClassList
+	get /user/class/list returns ([]UserClassResp)
+
+	@handler UserClassUpdate
+	get /user/class/update (UserClassUpdateReq) returns (UserClassUpdateResp)
+
+	@handler UserClassInfo
+	get /user/class/info (UserClassReq) returns (UserClassResp)
+
+	@handler UserClassAdd
+	get /user/class/add (UserClassAddReq) returns (UserClassAddResp)
+
+	@handler UserClassDelete
+	get /user/class/delete (UserClassDeleteReq) returns (UserClassDeleteResp)
+}
+
