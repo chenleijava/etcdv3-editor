@@ -10,6 +10,7 @@ import { history, Link } from '@umijs/max';
 import type { RequestOptions } from '@@/plugin-request/request';
 import { message } from 'antd';
 import proLayoutDefaultSettings from '../config/defaultSettings';
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from 'react';
 
 // 是否是开发环境
 const { REACT_APP_ENV = 'dev' } = process.env;
@@ -81,14 +82,25 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     avatarProps: {
       src: initialState?.currentUser?.avatar,
       title: <AvatarName />,
-      render: (_, avatarChildren) => {
+      render: (
+        _: any,
+        avatarChildren:
+          | string
+          | number
+          | boolean
+          | ReactElement<any, string | JSXElementConstructor<any>>
+          | Iterable<ReactNode>
+          | ReactPortal
+          | null
+          | undefined,
+      ) => {
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       },
     },
 
     //水印
     waterMarkProps: {
-      content: initialState?.currentUser?.name,
+      //content: initialState?.currentUser?.name,
     },
 
     // 底部 copyright
@@ -99,6 +111,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     //这是一个典型的前端权限控制机制，确保未登录用户只能访问登录页面，其他页面都需要登录后才能访问。
     onPageChange: () => {
       const token = localStorage.getItem('token');
+      // @ts-ignore
       const { location } = history;
       if (!token && location.pathname !== loginPath) {
         history.push(loginPath);
@@ -126,6 +139,8 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       },
     ],
 
+
+
     menuHeaderRender: undefined,
 
     //Pro 中默认会读取 config/config.tsx 中的 routes 配置作为 ProLayout 的菜单数据来生成菜单，
@@ -133,19 +148,24 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     //https://beta-pro.ant.design/docs/advanced-menu-cn
     menu: undefined,
 
-    // 左下角 链接
-    links: isDev
-      ? [
-          <Link key="openapi" to="/umi/plugin/openapi" target="_blank">
-            <LinkOutlined />
-            <span>这里跳转到想要去的地址</span>
-          </Link>,
-        ]
-      : [],
 
-    // 自定义 403 页面
-    // unAccessible: <div>unAccessible</div>,
-    // 增加一个 loading 的状态
+    // 左下角 链接
+    links: [
+      <a
+        key="etcd-editor"
+        href="https://github.com/chenleijava/etcdv3-editor"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
+      >
+        <LinkOutlined />
+        <span>etcd-editor</span>
+      </a>,
+    ],
+
+ 
+
+    // SettingDrawer配置
     childrenRender: (children) => {
       //if (initialState?.loading) return <PageLoading />;
       return (
@@ -209,6 +229,7 @@ function getBaseURLByAppEnv(env: string): string {
  */
 export const request: RequestConfig = {
   //超时设定
+  // @ts-ignore
   timeout: 1000,
 
   //https://proapi.azurewebsites.net

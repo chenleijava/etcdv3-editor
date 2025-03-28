@@ -30,7 +30,7 @@ you onboard!
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/username/project-name.git
+   git clone https://github.com/chenleijava/etcdv3-editor
    ```
 2. **Install Dependencies**
     - Frontend: `cd frontend && yarn install`

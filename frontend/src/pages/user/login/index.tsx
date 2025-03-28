@@ -55,7 +55,7 @@ const useStyles = createStyles(({ token }) => {
       justifyContent: 'center',
       height: '100vh',
       overflow: 'auto',
-      background: '#ffffff', // 暗黑渐变背景
+      background: '#241d1d', // 暗黑渐变背景
       margin: '0 auto',
       transition: 'all 0.3s',
       color: '#ffffff', // 文字颜色调整为白色以适应暗黑主题
@@ -188,29 +188,30 @@ const Login: React.FC = () => {
           contentStyle={{
             maxWidth: '75vw',
             padding: '24px',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#262222',
             border: `1px solid ${token.colorBorder}`,
             borderRadius: token.borderRadius,
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
           }}
           logo={
-            <img
-              alt="logo"
-              src="/etcd.svg"
-              style={{
-                width: 'clamp(500px, 35vw, 800px)', // 进一步增加尺寸范围
-                height: 'auto',
-                transition: 'all 0.3s ease',
-                margin: '30px 0', // 增加间距以适应更大的logo
-                maxHeight: '35vh', // 添加最大高度限制，避免在某些屏幕上过大
-              }}
-            />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img
+                src="/etcd.svg"
+                alt="ETCD Logo"
+                style={{
+                  width: '160px',  // 固定宽度
+                  height: 'auto',
+                  margin: '1rem auto',
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
           }
           title={
             <div
               style={{
                 fontSize: 'clamp(24px, 3vw, 32px)',
-                color: '#2c3e50',
+                color: '#edf1f2',
                 fontWeight: 600,
                 textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
                 letterSpacing: '1px',
@@ -219,7 +220,21 @@ const Login: React.FC = () => {
               Etcd V3 Editor
             </div>
           }
-          subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
+          // subTitle={intl.formatMessage({id: 'pages.layouts.userLayout.title'})}
+
+          subTitle={
+            <div
+              style={{
+                fontSize: 'clamp(16px, 3vw,16px)',
+                color: '#edf1f2',
+                fontWeight: 500,
+                textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+                letterSpacing: '1px',
+              }}
+            >
+              Etcd V3 可视化编辑工具
+            </div>
+          }
           initialValues={{
             autoLogin: true,
           }}
@@ -403,14 +418,28 @@ const Login: React.FC = () => {
             }}
           >
             <ProFormCheckbox noStyle name="autoLogin">
-              <FormattedMessage id="pages.login.rememberMe" defaultMessage="自动登录" />
+              <div
+                style={{
+                  fontWeight: 'bold',
+                  color: '#edf1f2',
+                }}
+              >
+                <FormattedMessage id="pages.login.rememberMe" defaultMessage="自动登录" />
+              </div>
             </ProFormCheckbox>
             <a
               style={{
                 float: 'right',
               }}
             >
-              <FormattedMessage id="pages.login.forgotPassword" defaultMessage="忘记密码" />
+              <div
+                style={{
+                  fontWeight: 'bold',
+                  color: '#edf1f2',
+                }}
+              >
+                <FormattedMessage id="pages.login.forgotPassword" defaultMessage="忘记密码" />
+              </div>
             </a>
           </div>
         </LoginForm>
