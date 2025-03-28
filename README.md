@@ -10,7 +10,7 @@
 
 ### Overview
 
-Welcome to **Project Name**, an open-source full-stack application designed for efficiency and scalability! The backend
+Welcome to **ETCD V3 EDITOR**, an open-source full-stack application designed for efficiency and scalability! The backend
 is powered by **go-zero**, a high-performance microservices framework, while the frontend is built with **Ant Design Pro
 **, delivering a modern and intuitive user interface. Whether you're a developer or contributor, we’re excited to have
 you onboard!
