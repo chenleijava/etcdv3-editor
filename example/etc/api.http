@@ -1,0 +1,43 @@
+
+### 测试用户登入，获取 token
+POST http://{{host}}/v1/user/login
+Content-Type: application/json
+
+{
+  "userName": "my-secret-token",
+  "password": "123456"
+}
+
+> {%
+    client.global.set("auth_token", response.body.token);
+%}
+
+### 测试用户基于JWT访问接口,Authorization by token
+POST http://{{host}}/v1/user/info
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "userName": "{{auth_token}}",
+  "password": "123456"
+}
+
+
+### 测试用户基于JWT访问接口,串改签名
+POST http://{{host}}/v1/user/info
+Authorization: Bearer {{auth_token}}+1
+Content-Type: application/json
+
+{
+  "userName": "{{auth_token}}",
+  "password": "123456"
+}
+
+### 测试用户基于JWT访问接口,不带 Authorization
+POST http://{{host}}/v1/user/info
+Content-Type: application/json
+
+{
+  "userName": "{{auth_token}}",
+  "password": "123456"
+}

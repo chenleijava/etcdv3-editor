@@ -1,0 +1,22 @@
+    //bean
+    type Request {
+        Name string `path:"name"`
+        Age int32 `path:"age"`
+    }
+
+
+    type Response {
+        Message string `json:"message"`
+        Request *Request `json:"request"`
+    }
+
+    service greet-api {
+        //接口定义
+        @handler GreetHandler
+        get /greet/v1/from/:name/:age (Request) returns (Response)
+
+        //接口定义
+        @handler GreetHandlerV2
+        delete /greet/v2/from/:name/:age (Request) returns (Response)
+    }
+

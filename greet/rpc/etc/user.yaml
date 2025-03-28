@@ -1,0 +1,11 @@
+Name: user_service
+ListenOn: 0.0.0.0:7777
+
+##
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  ##etcd prefix
+  Key: user.rpc.service
+  User: root
+  Pass: '123456'

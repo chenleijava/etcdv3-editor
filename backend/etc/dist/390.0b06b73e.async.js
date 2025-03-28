@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksensor_manager_complete=self.webpackChunksensor_manager_complete||[]).push([[390],{96390:function(E,n,t){t.r(n),t.d(n,{default:function(){return s}});var a=t(67294),e=t(92016),u=t(85893);function s(){var o=(0,e.useOutletContext)();return(0,u.jsx)(e.Outlet,{context:o})}}}]);
