@@ -1,9 +1,0 @@
-### 本地测试环境
-GET http://127.0.0.1:4399/greet/v1/from/me/998
-
-### 本地测试环境Ping
-GET http://127.0.0.1:8888/v1/ping
-
-### haproxy配置测试环境
-GET http://192.168.2.100:5555/greet/v1/from/me/998
-

@@ -109,3 +109,8 @@ pull requests.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+### My VC
+
+Here's my VC, and if I can help you with your work or give me an opportunity to work remotely, I'd be happy to do it
+,detail info view : [My VC](./CV_LEI_CHEN_EN.pdf).
+---
