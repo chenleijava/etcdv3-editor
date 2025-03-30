@@ -116,4 +116,7 @@ Here's my VC, and if I can help you with your work or give me an opportunity to 
 
 - [中文简历](https://chenleijava.github.io/etcdv3-editor/cv/CV_ZH.html)
 
+### My QR
+![QR](./img/QR.jpg)
+
 ---
