@@ -112,5 +112,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### My VC
 
 Here's my VC, and if I can help you with your work or give me an opportunity to work remotely, I'd be happy to do it
-,detail info view : [My VC](./CV_LEI_CHEN_EN.pdf).
+
+[//]: # (- [View Full Resume &#40;HTML&#41;]&#40;./CV_EN.html&#41;)
+
+- <a href="./CV_EN.html" target="_blank">Click here to view my full resume</a>
+
 ---

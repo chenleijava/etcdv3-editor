@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈磊 - 简历</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .section-title {
+            @apply text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2;
+        }
+        .item-title {
+            @apply text-lg md:text-xl font-semibold mt-4 mb-2;
+        }
+        .link {
+            @apply text-blue-600 hover:underline;
+        }
+        code {
+            @apply bg-gray-200 px-1 rounded;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 p-4 md:p-8 lg:p-12">
+<div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 md:p-8">
+    <!-- 基本信息 -->
+    <section>
+        <h1 class="section-title">基本信息</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <p><strong>姓名:</strong> 陈磊</p>
+            <p><strong>英文名:</strong> Ethan</p>
+            <p><strong>出生年月:</strong> 1989-01-06</p>
+            <p><strong>国籍:</strong> 中国</p>
+            <p><strong>学历:</strong> 全日制4年本科</p>
+            <p><strong>专业:</strong> 软件工程</p>
+            <p><strong>毕业院校:</strong> 重庆邮电大学</p>
+            <p><strong>毕业时间:</strong> 2010年9月 - 2014年6月</p>
+            <p><strong>工作年限:</strong> 10年+</p>
+            <p><strong>邮箱:</strong> <a href="mailto:chenleijava@gmail.com" class="link">chenleijava@gmail.com</a></p>
+            <p><strong>电话:</strong> +8617383023619</p>
+        </div>
+    </section>
+
+    <!-- 个人优势 -->
+    <section>
+        <h2 class="section-title">个人优势</h2>
+        <ol class="list-decimal list-inside space-y-2">
+            <li>近10年的软件研发经验，我具备大规模在线服务设计和开发经验，并拥有一定的技术视野。我担任产品技术负责人的实践经验使我对产品和软件服务有了深入的理解和实际的实践经验。</li>
+            <li>担任技术负责人期间，我具备团队管理经验，带领过近10人的研发团队，成功地完成了多个重要项目。</li>
+            <li>专业方向上，我擅长使用多种编程语言服务我的工作，包括但不仅限于 <code>Java，Golang</code> 等编程语言，同时熟悉并使用软件开发领域常用的框架和工具。热爱技术，不定时更新自己的技术博客，维护多个开源项目。</li>
+            <li>熟悉腾讯云、阿里云、AWS，Azure等云服务提供商的服务和工具，能够熟练地完成相关部署运维相关工作。能胜任部分移动端领域的开发和集成工作。</li>
+        </ol>
+    </section>
+
+    <!-- 求职意向 -->
+    <section>
+        <h2 class="section-title">求职意向</h2>
+        <p><strong>工作类型:</strong> 全职</p>
+        <p><strong>职位类型:</strong> Software Engineer</p>
+    </section>
+
+    <!-- 专业技能 -->
+    <section>
+        <h2 class="section-title">专业技能</h2>
+        <ul class="list-disc list-inside space-y-2">
+            <li><strong>产品技术需求分析，技术文档撰写，产品架构设计落地，沟通能力，团队研发输出，管理能力，问题跟踪排查与调试</strong>: 具备丰富的产品研发和管理经验，能够高效地分析需求、撰写文档、领导团队并解决问题。</li>
+            <li><strong>编程语言</strong>: 具备广泛的编程语言知识和实际开发经验，包括但不仅限于 <code>Java，Golang，C/C++，React，JS，C#，HTML，CSS</code> 等编程语言。</li>
+            <li><strong>Web开发</strong>: 了解前端开发框架 <code>React</code>、包管理工具 <code>yarn、pnpm、npm</code>，开发脚手架 <code>Ant Design Pro、antd、antd charts、Procomponents</code>。</li>
+            <li><strong>数据库和相关工具</strong>: 实践中用过 <code>MySQL、PostgreSQL、TimescaleDB、ClickHouse</code> 等关系数据库，结合 EXPLAIN，SQL 优化（如B树索引、复合索引，覆盖索引）适配场景查询场景，<code>kingshard</code> 数据库 proxy 工具，<code>Redis、Pika</code> 等内存数据库有一定的使用经验，数据库连接池的常规使用。开源工具集: <a href="https://github.com/chenleijava/springJredisCache" class="link">Redis 开源工具集</a></li>
+            <li><strong>全文搜索与日志分析</strong>: 具有使用过 <code>ElasticSearch、Kibana、Filebeat、Logstash</code> 等工具进行数据全文搜索和日志统计分析处理经验。</li>
+            <li><strong>常用开发框架与库</strong>: 掌握并使用 <code>Spring Boot、Spring Cloud（含 Alibaba）、go-micro、go-zero、gateway、gin、grpc、nginx、json、protobuf、flatbuf、msgpack，MQTT，Modbus RTU，RS-485</code> 等常用开发框架和库，具备丰富的研发实践经验。</li>
+            <li><strong>消息队列</strong>: 使用过 <code>RabbitMQ 和 NSQ</code> 消息队列，可以有效地处理分布式系统中的消息传递和异步操作，对于消息可靠性投递和数据幂等性设计，保证数据最终一致性，可靠性落地存储有实践经验。</li>
+            <li><strong>网络编程框架</strong>: 使用过 <code>Netty、Mina、Mudo、gnet</code> 等网络编程框架，具备一定的处理网络通信的能力。</li>
+            <li><strong>分布式任务调度</strong>: 有使用 <code>xxl-job、datax</code> 等分布式任务调度工具。</li>
+            <li><strong>Restful API 设计与实现</strong>: 具备设计和实现 <code>Restful API</code> 的经验，JWT，有内容传输加解密方案的实践经验，如 RSA 和 AES 等。</li>
+            <li><strong>容器技术</strong>: 熟练使用 <code>Docker</code> 和 <code>Docker Compose</code> 等容器基础操作经验，编写 <code>Dockerfile</code>，构建和部署容器化的应用。</li>
+            <li><strong>服务注册与配置管理</strong>: 具备 <code>consul、etcd</code> 等服务注册发现和配置管理的使用实践，开源项目: <a href="https://github.com/chenleijava/etcdv3-editor" class="link">ETCD-V3-EDITOR</a> 配置管理可视化工具。</li>
+            <li><strong>运维能力</strong>: 具有绝大多数 Linux 内核操作系统的基本操作实践，能够胜任部分运维工作。</li>
+            <li><strong>版本控制</strong>: 能使用 <code>git，svn</code> 等版本控制工具，以及 <code>github 和 gogs</code> 等常用代码管理工具。</li>
+            <li><strong>操作系统</strong>: 熟悉 <code>Windows、Linux、MacOS</code> 等操作系统使用。</li>
+            <li><strong>开发工具</strong>: IDEA、VSCODE。</li>
+            <li><strong>云服务</strong>: 有腾讯云、阿里云、AWS，Azure 等云服务提供商的服务和工具使用实践。</li>
+            <li><strong>软件开发流程</strong>: 针对敏捷开发流程（Scrum）有一定的实践，能够高效地进行产品过程和任务管理以及工程迭代和增量交付。</li>
+            <li><strong>软件测试</strong>: 具备单元测试、集成测试和系统测试的经验和能力，对持续集成，交付集合弹性容器服务有一定的使用经验。</li>
+            <li><strong>支付相关开发</strong>: 能够使用支付宝、微信和 GooglePay 等三方支付接口集成应用开发。</li>
+            <li><strong>个人项目</strong>: <a href="https://github.com/chenleijava" class="link">GitHub 主页</a> 和 <a href="https://my.oschina.net/chenleijava" class="link">个人技术博客主页</a>，上面有丰富的个人项目和技术文章供您参考。</li>
+        </ul>
+    </section>
+
+    <!-- 工作经历 -->
+    <section>
+        <h2 class="section-title">工作经历</h2>
+        <div class="space-y-6">
+            <div>
+                <h3 class="item-title">FlowTec - 产品负责人</h3>
+                <p><strong>时间:</strong> 2023.11 - 至今</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>参与工业互联网产品研发，炼铁高炉喷煤工业需求分析，CAD 制图，产品研发，工业组件 BOM 清单（设备，仪器仪表），市场分析，实地调研与推广，产品应用点、供需关系分析。</li>
+                    <li>基于 <code>go-zero</code> 作为脚手架，前端：<code>antd, antd design pro，antd charts</code> 作为数据可视化及数据分析，<code>timescaledb</code> 时序数据库存储，参与 PLC 喷煤工艺算法实现。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">自由职业 - 自由职业</h3>
+                <p><strong>时间:</strong> 2023.3 - 2023.11</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>开发 AIGC 相关产品业务，对接 GPT，参与 ChatBot AI、AskAI、翻译产品，相机产品研发。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">一兜糖 - 技术 CTO</h3>
+                <p><strong>时间:</strong> 2022.10 - 2023.3</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li><strong>架构设计:</strong> 深入了解业务需求，进行系统的需求分析和架构设计。</li>
+                    <li><strong>技术难题解决与团队支持:</strong> 带领团队解决项目中的技术难题，并为团队成员提供专业的技术支持。</li>
+                    <li><strong>产品与市场分析:</strong> 参与产品功能设计讨论，市场需求分析。数据分析，BI 集成与功能看板发布。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">广州星檬 - 技术 CTO</h3>
+                <p><strong>时间:</strong> 2019.4 - 2022.10</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li><strong>需求分析与架构设计:</strong> 针对特定的产品结构，进行系统的分析和结构设计，以满足业务的需求。</li>
+                    <li><strong>技术难题解决与团队支持:</strong> 解决复杂技术问题，能够带领团队解决项目中的技术难题，并为团队成员提供专业的技术支持。</li>
+                    <li><strong>项目管理:</strong> 有项目管理经验，能够领导产品研发团队按时、按质、按量完成开发任务，实现精细化的项目管理。</li>
+                    <li><strong>团队管理与人才培养:</strong> 注重团队建设和人才培养，能够构建技术团队成长计划，通过指导和培训提升团队整体技术水平。</li>
+                    <li><strong>战略规划与决策:</strong> 参与公司产品的战略规划，制定技术方向和策略，并做出关键技术决策，以确保产品与技术的发展战略相一致。</li>
+                    <li><strong>云部署与运维:</strong> 负责参与产品云部署和运维工作，确保产品的顺利运行和持续优化。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">重庆速占位科技有限公司 - 软件工程师</h3>
+                <p><strong>时间:</strong> 2015.10 - 2018.9</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>参与公司项目的开发和维护工作，负责模块设计、编码和单元测试。</li>
+                    <li>与团队成员紧密合作，完成项目目标，参与需求讨论和项目进度跟踪。</li>
+                    <li>负责技术文档撰写，参与客户端开发工作，基于 Qt 重写客户端 UI，完善网络模块。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">成都徳驰环保科技有限公司 - 软件工程师</h3>
+                <p><strong>时间:</strong> 2014.6 - 2015.10</p>
+                <p><strong>职能:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>负责服务端编码、数据库设计、技术文档撰写。</li>
+                    <li>实现产品基础功能，调研并实施网络服务模块。</li>
+                    <li>协助产品经理参与产品需求讨论。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经历 -->
+    <section>
+        <h2 class="section-title">项目经历</h2>
+        <div class="space-y-6">
+            <div>
+                <h3 class="item-title">高炉炼铁均匀喷煤系统</h3>
+                <p><strong>项目时间:</strong> 2023.11 - 至今</p>
+                <p><strong>项目所属:</strong> FlowTec</p>
+                <p><strong>项目背景:</strong> 高炉炼铁是钢铁生产中的关键工艺，喷煤技术是高炉炼铁的重要组成部分。均匀喷煤可以提高高炉的热效率和稳定性，降低能耗和排放。然而，实现均匀喷煤面临诸多挑战，如煤粉的均匀分布、喷吹压力的控制等。因此，开发一个自动化控制系统来实现高炉风口的均匀喷煤至关重要。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>基于 <code>go-zero</code> 构建基础结构，使用 <code>antd</code>、<code>antd design pro</code>、<code>antd charts</code> 作为前端脚手架，采用 <code>timescaledb</code> 作为时序数据库，PLC 编程用于工业控制。</li>
+                    <li>参与需求分析，深入了解高炉喷煤工艺，分析各个高炉风口的喷煤需求。</li>
+                    <li>设计系统架构，确保系统能够实时监控和控制喷煤过程。</li>
+                    <li>使用 <code>go-zero</code> 开发后端服务，实现数据采集、处理和控制逻辑。</li>
+                    <li>利用 <code>antd</code> 和相关组件开发用户友好的前端界面，展示实时数据和控制参数。</li>
+                    <li>集成 <code>timescaledb</code> 存储和管理时序数据，确保数据的高效查询和分析。</li>
+                    <li>编写 PLC 程序，实现对喷煤设备的精确控制。</li>
+                    <li>进行系统测试和调试，确保系统的稳定性和可靠性。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">ChatBot AI、AskAI、翻译王</h3>
+                <p><strong>项目时间:</strong> 2022.10 - 2023.3</p>
+                <p><strong>项目所属:</strong> 自有产品</p>
+                <p><strong>项目背景:</strong> 随着人工智能技术的发展，聊天机器人和智能问答系统在各个领域得到了广泛应用。ChatBot AI、AskAI 和翻译王是基于 GPT 模型开发的产品，旨在为用户提供智能聊天、问答和翻译服务。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>对接 GPT 模型，使用 <code>go-zero</code> 作为后端脚手架，管理系统，前端使用 <code>React</code> 或 <code>antd</code>。</li>
+                    <li>设计和开发 ChatBot AI、AskAI 和翻译王的核心功能模块。</li>
+                    <li>集成 GPT 模型，实现自然语言处理和生成。</li>
+                    <li>开发用户界面，提供流畅的交互体验。</li>
+                    <li>优化系统性能，确保响应速度和准确性。</li>
+                    <li>处理多语言支持和翻译功能。</li>
+                    <li>进行用户测试和反馈收集，持续改进产品。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">网关设计</h3>
+                <p><strong>项目时间:</strong> 2022.10 - 2023.3</p>
+                <p><strong>项目所属:</strong> 一兜糖</p>
+                <p><strong>项目背景:</strong> 网关是连接不同网络和系统的关键组件，负责流量管理、安全控制和服务发现等功能。在一兜糖的项目中，网关设计是确保系统安全、高效运行的重要环节。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>使用 <code>go-micro</code> 结合 <code>gin</code> 实现网关功能，集成 <code>etcd</code> 进行服务发现和配置管理。</li>
+                    <li>设计网关架构，定义路由规则和服务发现机制。</li>
+                    <li>实现安全控制，包括认证、授权和加密。</li>
+                    <li>集成负载均衡和流量控制，确保系统的高可用性。</li>
+                    <li>开发监控和日志系统，实时跟踪网关状态和性能。</li>
+                    <li>编写 API 文档，确保开发团队能够正确使用网关服务。</li>
+                    <li>进行性能测试和优化，提升网关的吞吐量和响应速度。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">广告聚合自动化系统, APP 产品</h3>
+                <p><strong>项目时间:</strong> 2019.4 - 2023.10</p>
+                <p><strong>项目所属:</strong> 广州星檬</p>
+                <p><strong>项目背景:</strong> 广告聚合应用系统，服务于公司所有上线的应用 APP；在当前已经上线的项目中，各个应用中的用户系统、订单支付系统、数据统计、数据存储，在每个项目实施开发的功能实现都具备共同的服务特性；投放素材管理，为了便于整体应用平台能够服务于当前项目和后续开发迭代的功能项目需求，并且能够重复利用，快速迭代开发，服务于公司的产品线；在广告投放的过程中，需要对广告竞价，广告下发策略（如广告类型，广告平台，时间，曝光次数）制定，广告展示效果统计，收益数据统计；同时按照指定的维度，生成数据表报和查询入口。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>基于 <code>go-micro</code> 作为基础的开发脚手架，实现网关，用户系统，订单系统，应用服务系统，报表系统。</li>
+                    <li>部分系统采用 Java 体系技术栈：<code>Spring Boot, Spring Cloud & Spring Cloud Alibaba</code>。</li>
+                    <li>服务均注册到 <code>etcd</code> 中，从而实现服务的发现以及配置的管理，基于 etcd-manager 进行可视化的配置管理，应用配置规则引擎的管理。</li>
+                    <li>服务间的调用采用 <code>grpc</code>，交互协议基于自定义 <code>RESTful API</code>，基于 <code>RSA+AES</code> 进行传输内容的加解密。</li>
+                    <li>流量入口基于云服务商的防火墙规则进行过滤，通过 nginx 路由 HASH 配置规则，实现流量的负载均衡，将请求分发到应用网关。</li>
+                    <li>应用网关功能有：数据的鉴权、内容加解密、路由规则、服务发现、日志转发、阈值控制、IP 和 IP 段限制、路由规则黑白名单、路由修改转发、服务发现，IP_HASH 算法。</li>
+                    <li>通过接口与第三方系统对接（支付宝，微信，GooglePay），实现订单管理、支付功能等。</li>
+                    <li>数据持久化基于 <code>Mysql，Pika</code>；基于 <code>kingshared</code> 实现对相应的逻辑表进行拆分和代理转发 SQL 请求。</li>
+                    <li>统计维度数据，基于 <code>RabbitMQ</code>，提供通用的 Push 数据接口，下游数据基于 <code>ElasticSearch，Kibana</code> 进行数据的索引存储和可视化分析。</li>
+                    <li>数据存储采用 <code>Clickhouse</code> 进行持久化，通过 <code>Datax 和 xxl-job</code> 定时任务管理器，周期性的将 Mysql 的数据按照需求的天维度，进行全量数据和增量数据同步至 <code>Clickhouse</code>。</li>
+                    <li>采用 <code>superset</code> 生成可视化每日数据报表，数据源来自于 <code>Mysql 和 ClickHouse</code>，采用 React 编写部分 Web 客户端。</li>
+                    <li>在订单系统中，支付数据的延迟处理，采用 <code>RabbitMQ</code> 中插件的方案实现延迟处理订单，基于 DTM 分布式事务管理器，实现支付订单的强一致性，并在日志系统记录相关日志，保证用户支付权益。</li>
+                    <li>用户数据基于 <code>Pika</code> 进行持久化和内存存储，采用规则方案是：写入数据库成功之后，先删除在写入方案，保证高效性能读取能力，最终一致性的方案进行实施。</li>
+                    <li>基于 <code>Docker</code> 容器化，云服务商提供的弹性服务部署，按需进行分配产品的云资源消耗情况。</li>
+                </ul>
+                <p><strong>项目难点:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>工程方面需求分析，技术文档撰写，架构设计，系统设计、编码、测试。</li>
+                    <li>大量用户行为数据存储，分析处理。</li>
+                    <li>平台升级期间需要保证原有功能的稳定性，同时引入新功能，需要解决系统性能和兼容性问题（如历史遗留系统基于 Java 体系进行构建并开发）。</li>
+                    <li>项目管理产品过程和任务管理，工程迭代，增量交付等。</li>
+                    <li>团队管理构建技术团队成长计划方案，培养技术开发人员，指导具体开发实施工作。</li>
+                    <li>处理运营过程中的突发情况和应急预案能力。</li>
+                </ul>
+                <p><strong>优化和改进:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>工程侧，提高产品需求分析能力，优化技术文档，制定统一实施方案，架构设计，系统设计，技术栈的引入能够适当并持续演进。</li>
+                    <li>项目管理对于开发流程不断完善，在工程迭代，增量开发中不断地优化和总结，找到更合适的方案进行实施。</li>
+                </ul>
+                <p><strong>我的价值:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>沉淀系统设计和架构，技术文档和技术栈的引入确立，建立完善的开发工作流。</li>
+                    <li>提供系统性，多样化方案解决实际问题，完成应用平台的设计和实现并交付使用。</li>
+                    <li>为公司创造了价值，公司有了持续的盈利能力。</li>
+                    <li>整体平台系统服务于如下线上产品：
+                        <ul class="list-disc list-inside ml-4">
+                            <li>基于 ChatGPT 实现的 AI 智能产品: <a href="https://apps.apple.com/us/app/chatbot-ai-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E7%A5%9E%E5%99%A8/id6446472200" class="link">Chatbot AI——人工智能聊天神器</a></li>
+                            <li>星座类产品: <a href="https://apps.apple.com/nl/app/%E6%8F%AA%E6%8F%AA-%E6%98%9F%E5%BA%A7%E8%BF%90%E5%8A%BF%E6%83%85%E6%84%9F%E5%8D%A0%E5%8D%9C/id1460547495" class="link">揪揪-星座运势情感占卜</a></li>
+                            <li>翻译类产品: <a href="https://m.app.mi.com/?word=%E7%BF%BB%E8%AF%91%E7%8E%8B&token=..." class="link">翻译王</a></li>
+                            <li>相机类产品:
+                                <ul class="list-disc list-inside ml-4">
+                                    <li><a href="https://m.app.mi.com/?word=%E5%A5%87%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA&token=..." class="link">奇妙鸭相机-合成修图抠图工具</a></li>
+                                    <li><a href="https://m.app.mi.com/?word=%E5%8F%98%E5%A5%BD%E7%9C%8B%E7%9B%B8%E6%9C%BA&token=..." class="link">变好看相机-一键更好看更有趣</a></li>
+                                    <li><a href="https://m.app.mi.com/?word=%E5%8F%98%E7%BE%8E%E7%9B%B8%E6%9C%BA&token=..." class="link">变美相机</a></li>
+                                </ul>
+                            </li>
+                            <li>IAA 换肤类产品: <a href="https://m.pp.cn/detail.html?appid=8337614&ch_src=pp_dev&ch=default" class="link">V8 大神</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">智能餐柜系统</h3>
+                <p><strong>项目时间:</strong> 2015.10 - 2018.9</p>
+                <p><strong>项目所属:</strong> 重庆速占位科技有限公司</p>
+                <p><strong>项目背景:</strong> "云食堂"——速位，个性化定制食堂。手机点餐，手机支付，餐厅内自助扫描二维码取餐，全程无需排队等候，解决排队等待困扰。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>使用 <code>SpringBoot</code> 框架进行后端开发，通过 <code>RESTful API</code> 提供服务，基于 <code>RabbitMQ</code> 进行订单处理和系统消息处理。</li>
+                    <li>采用 C++，基于 Qt 实现客户端，Mudo 作为网络通信框架和服务端进行交互。</li>
+                    <li>数据库持久化基于 Mysql 存储，Redis 处理相关热数据的读写。</li>
+                    <li>基于 RS485 协议，处理餐柜控制，灯光控制，客户端初始化 DNS 解析和时钟的校准。</li>
+                </ul>
+                <p><strong>项目难点:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>升级 Qt，采用 QML 进行全面的开发。</li>
+                    <li>控制餐柜的灯光和门的自动化，网络模块的改造。</li>
+                </ul>
+                <p><strong>优化和改进:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>优化客户端和服务的交互网络模块，改进用户界面。</li>
+                    <li>采用 QT 进行开发，基于 QML 开发 UI，快速迭代更新客户端的展示能力。</li>
+                </ul>
+                <p><strong>我的价值:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>负责项目的后端开发和 API 设计，与硬件团队合作解决设备对接问题，提供了稳定可靠的智能餐柜控制系统。</li>
+                    <li>参与项目技术方案和选型的讨论，完善项目实施过程中的细节设计，编码和工程文档的编写，协调设计对接产品的实现细节。</li>
+                    <li>团队合作沟通，解决问题的能力。</li>
+                    <li>产品成功上线并投入使用: <a href="https://36kr.com/p/1722046119937" class="link">智能餐柜</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="item-title">卡牌游戏</h3>
+                <p><strong>项目时间:</strong> 2014.6 - 2015.10</p>
+                <p><strong>项目所属:</strong> 成都徳驰环保科技有限公司</p>
+                <p><strong>项目背景:</strong> 卡牌游戏，基于策略，放置类型游戏。</p>
+                <p><strong>项目细节:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>基于 Java 进行后端开发，使用 Netty 作为网络框架通信。</li>
+                    <li>采用 Protobuf 进行数据传输，自定义交互协议：包长+包体的方案。</li>
+                </ul>
+                <p><strong>项目难点:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>网络传输，由于发送数据之后，数据包在传输的过程中，在网络发生拥堵或者传输中的延迟，可能导致接收方的数据不符合预期；在 TCP/IP 协议中，接收的数据会先写入到缓冲区，同一个数据包会被合并成一个大包；需要设计方案解决粘包的问题；采用 Netty 作为网络框架，提供了解决数据包编解码的方案，找出合理最佳适应于当前项目的方案并设计一套自定义基于 Protobuf 的序列化方案。</li>
+                </ul>
+                <p><strong>优化和改进:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>提高 Netty 底层网络的编解码能力，合理分配线程模型和模型对应的线程池数量。</li>
+                    <li>数据库的设计和改进。</li>
+                    <li>客户端和服务端交互协议的设计。</li>
+                </ul>
+                <p><strong>我的价值:</strong></p>
+                <ul class="list-disc list-inside">
+                    <li>负责项目的后端开发和 API 设计，撰写项目相关的技术文档和交互协议，数据库表结构的设计。</li>
+                    <li>参与项目技术方案和选型的讨论，完善项目实施过程中的细节设计。</li>
+                    <li>编码，协调设计对接产品的实现细节。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
