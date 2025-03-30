@@ -2,7 +2,7 @@
 
 ![Logo](/img/etcd.svg)
 
-**[English](#english) | [中文](README-zh.md)**
+[English](#english) | [中文](README-zh.md)
 
 ---
 
@@ -104,15 +104,16 @@ Etcd:
 We welcome contributions! Please check our [Contributing Guidelines](CONTRIBUTING.md) and feel free to submit issues or
 pull requests.
 
-### License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 ### My VC
 
 Here's my VC, and if I can help you with your work or give me an opportunity to work remotely, I'd be happy to do it
 
-- [View Full Resume (HTML)](./CV_EN.html)
+- [View Full Resume](https://chenleijava.github.io/etcdv3-editor/cv/CV_EN.html) , at the same time ,You can aloso scan my
+  QR, add me with your friend, I respectfully for you. Let’s build something amazing together!.
+  thank you!
+
+- [中文简历](https://chenleijava.github.io/etcdv3-editor/cv/CV_ZH.html)
 
 ---

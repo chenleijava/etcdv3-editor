@@ -102,13 +102,7 @@ Etcd:
 
 ### 贡献指南
 
-我们非常欢迎贡献！请查看 [贡献指南](CONTRIBUTING.md)，随时提交问题或拉取请求。
-
-### 开源许可
-
-本项目采用 MIT 许可证，详情见 [LICENSE](LICENSE) 文件。
+我们非常欢迎贡献！
 
 ---
 
-**Happy Coding!** 🎉  
-Let’s build something amazing together!
