@@ -1,9 +1,9 @@
 services:
-  etcd-web-tool:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: etcd-web-tool:latest
+  etcd-editor:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    image: etcd-editor:latest
     environment:
       - TZ=Asia/Shanghai
     volumes:
@@ -16,26 +16,26 @@ services:
     ports:
       - "8888:8888"
     networks:
-      - etcd-web-tool-network
+      - etcd-editor-network
 
-  nginx:
-    container_name: nginx
-    image: nginx:latest
-    logging:
-      options:
-        max-size: "128m"
-    environment:
-      - TZ=Asia/Shanghai
-    networks:
-      - etcd-web-tool-network
-    ports:
-      - "8000:8000"
-    volumes:
-      - /etc/localtime:/etc/localtime
-      - ./etc/nginx:/etc/nginx
-      # 前端页面构建产物，根据你实际位置进行调整编译产物目录
-      - ../frontend/dist:/var/etcd-web-tool
+#  nginx:
+#    container_name: nginx
+#    image: nginx:latest
+#    logging:
+#      options:
+#        max-size: "128m"
+#    environment:
+#      - TZ=Asia/Shanghai
+#    networks:
+#      - etcd-editor-network
+#    ports:
+#      - "8000:8000"
+#    volumes:
+#      - /etc/localtime:/etc/localtime
+#      - ./etc/nginx:/etc/nginx
+#      # 前端页面构建产物，根据你实际位置进行调整编译产物目录
+#      - ../frontend/dist:/var/etcd-web-tool
 
 networks:
-  etcd-web-tool-network:
+  etcd-editor-network:
     driver: bridge

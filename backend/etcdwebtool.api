@@ -80,8 +80,8 @@ service EtcdWebTool {
 }
 
 @server (
-	group: etcd
-	jwt: Auth
+	group:      etcd
+	jwt:        Auth
 	middleware: UserAgentMiddleware
 )
 service EtcdWebTool {

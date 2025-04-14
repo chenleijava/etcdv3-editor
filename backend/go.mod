@@ -3,8 +3,8 @@ module backend
 go 1.24.1
 
 require (
+	github.com/chenleijava/xhttp v0.0.0-20250401031324-68894d03d09e
 	github.com/golang-jwt/jwt/v4 v4.5.2
-	github.com/json-iterator/go v1.1.12
 	github.com/zeromicro/go-zero v1.8.1
 	go.etcd.io/etcd/client/v3 v3.5.21
 )
@@ -23,6 +23,7 @@ require (
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0 // indirect
+	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
