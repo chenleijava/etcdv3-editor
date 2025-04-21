@@ -1,5 +1,5 @@
 # etcd-web-tool 服务基础配置
-Name: etcd-web-tool-service
+Name: etcdv3-editor
 Host: 0.0.0.0
 Port: 8888
 
@@ -10,7 +10,7 @@ Middlewares:
 
 # 当前服务日志配置相关
 Log:
-  ServiceName: etcd-web-tool-service
+  ServiceName: etcdv3-editor
   Encoding: plain
   TimeFormat: '2006-01-02 15:04:05.999999999'
   Level: debug
@@ -34,10 +34,9 @@ Auth:
 # etcd 配置相关
 Etcd:
   Hosts:
-    - 192.168.31.169:2379
     - 127.0.0.1:2379
   ID: 1
-  Key: etcd.web.tool
+  Key: etcdv3-editor
   User: root
   Pass: '123456'
 #  CertFile: ""

@@ -3,7 +3,7 @@ module backend
 go 1.24.1
 
 require (
-	github.com/chenleijava/xhttp v0.0.0-20250401031324-68894d03d09e
+	github.com/chenleijava/xhttp v0.0.0-20250421053915-b0c96510fa89
 	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/zeromicro/go-zero v1.8.1
 	go.etcd.io/etcd/client/v3 v3.5.21
