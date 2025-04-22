@@ -4,6 +4,7 @@ import (
 	"backend/internal/config"
 	"backend/internal/handler"
 	"backend/internal/svc"
+	"backend/internal/zapx"
 	"flag"
 	"fmt"
 	"github.com/chenleijava/xhttp/registry"
@@ -23,8 +24,13 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 
+	//zap logger
+	writer, err := zapx.NewZapWriter()
+	logx.Must(err)
+
 	var server *rest.Server
 	server = rest.MustNewServer(c.RestConf, rest.WithCors("*"))
+	logx.SetWriter(writer)
 
 	if c.Spa {
 		staticDir := "etc/dist"
@@ -48,7 +54,6 @@ func main() {
 
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
-
 	logx.Must(registry.RegisterRest(c.Etcd, c.RestConf))
 
 	logx.Debugf("Starting server at %s:%d...", c.Host, c.Port)

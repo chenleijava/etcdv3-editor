@@ -4,6 +4,9 @@ import (
 	"context"
 	"errors"
 	"github.com/golang-jwt/jwt/v4"
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/trace"
 	"time"
 
 	"backend/internal/svc"
@@ -26,7 +29,28 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 	}
 }
 
+// Span
+//
+//	@Description:
+//	@param ctx
+//	@param tracerName
+//	@param spanName
+//	@param opts
+//	@return context.Context
+//	@return trace.Span
+func Span(ctx context.Context, tracerName, spanName string, opts ...trace.SpanStartOption) (context.Context, trace.Span) {
+	return otel.Tracer(tracerName).Start(ctx, spanName, opts...)
+}
+
 func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, err error) {
+
+	_, span := Span(l.ctx, "Login", "check_user", trace.WithAttributes(
+		attribute.String("username", req.Username),
+		attribute.String("password", req.Password),
+	))
+	span.AddEvent("Loging proces")
+	defer span.End()
+
 	// 简单用户校验
 	if req.Username == l.svcCtx.Config.UserName && req.Password == l.svcCtx.Config.Password {
 		// 生成JWT Token
@@ -36,6 +60,7 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 		})
 		tokenString, err := token.SignedString([]byte(l.svcCtx.Config.Auth.AccessSecret))
 		if err != nil {
+			span.RecordError(err)
 			return nil, err
 		}
 		return &types.LoginResponse{Token: tokenString}, nil

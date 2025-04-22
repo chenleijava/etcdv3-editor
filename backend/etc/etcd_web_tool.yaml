@@ -2,15 +2,37 @@
 Name: etcdv3-editor
 Host: 0.0.0.0
 Port: 8888
+Verbose: true
 
-#https://go-zero.dev/docs/tutorials/http/server/middleware#loghandler
-Middlewares:
+# https://go-zero.dev/docs/tutorials/http/server/middleware
+MiddlewaresConf:
+  Trace: true
   Log: true
+  #https://go-zero.dev/docs/tutorials/http/server/middleware#prometheushandler
+  Prometheus: false
+  MaxConns: true
+  Breaker: true
+  Shedding: true
+  Timeout: true
+  Recover: true
+  Metrics: true
+  MaxBytes: true
+  Gunzip: true
+
+
+
+Telemetry:
+  Name: etcd-editor
+  Endpoint: http://127.0.0.1:14268/api/traces
+  Batcher: jaeger #直接通过 Jaeger 的协议发送数据
+  Sampler: 1.0 #控制追踪数据的采样率，避免全量采集导致性能开销。0.1：10% 采样（生产环境常用，降低存储压力）
+  Disable: false
 
 
 # 当前服务日志配置相关
 Log:
   ServiceName: etcdv3-editor
+  Mode: console
   Encoding: plain
   TimeFormat: '2006-01-02 15:04:05.999999999'
   Level: debug
