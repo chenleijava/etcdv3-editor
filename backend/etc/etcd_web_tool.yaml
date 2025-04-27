@@ -33,7 +33,7 @@ Telemetry:
 Log:
   ServiceName: etcdv3-editor
   Mode: console
-  Encoding: plain
+  Encoding: json
   TimeFormat: '2006-01-02 15:04:05.999999999'
   Level: debug
 
@@ -56,7 +56,7 @@ Auth:
 # etcd 配置相关
 Etcd:
   Hosts:
-    - 127.0.0.1:2379
+    - etcd:2379
   ID: 1
   Key: etcdv3-editor
   User: root
