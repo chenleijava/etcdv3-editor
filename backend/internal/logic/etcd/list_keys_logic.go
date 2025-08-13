@@ -25,6 +25,10 @@ func NewListKeysLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ListKeys
 }
 
 func (l *ListKeysLogic) ListKeys(req *types.ListRequest) (resp *types.ListResponse, err error) {
+
+	username := l.ctx.Value("username")
+	logx.Debugf("jwt from ctx value:%s", username)
+
 	getResp, err := l.svcCtx.EtcdClient.Get(l.ctx, "", clientv3.WithPrefix(), clientv3.WithKeysOnly())
 	if err != nil {
 		return nil, err

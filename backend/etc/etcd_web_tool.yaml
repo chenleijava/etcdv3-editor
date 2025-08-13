@@ -6,7 +6,7 @@ Verbose: true
 
 # https://go-zero.dev/docs/tutorials/http/server/middleware
 MiddlewaresConf:
-  Trace: true
+  Trace: false
   Log: true
   #https://go-zero.dev/docs/tutorials/http/server/middleware#prometheushandler
   Prometheus: false
@@ -26,7 +26,7 @@ Telemetry:
   Endpoint: http://127.0.0.1:14268/api/traces
   Batcher: jaeger #直接通过 Jaeger 的协议发送数据
   Sampler: 1.0 #控制追踪数据的采样率，避免全量采集导致性能开销。0.1：10% 采样（生产环境常用，降低存储压力）
-  Disable: false
+  Disable: true
 
 
 # 当前服务日志配置相关
@@ -56,7 +56,7 @@ Auth:
 # etcd 配置相关
 Etcd:
   Hosts:
-    - etcd:2379
+    - 127.0.0.1:2379
   ID: 1
   Key: etcdv3-editor
   User: root

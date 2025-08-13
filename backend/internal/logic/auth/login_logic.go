@@ -57,6 +57,8 @@ func (l *LoginLogic) Login(req *types.LoginRequest) (resp *types.LoginResponse, 
 		token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 			"username": req.Username,
 			"exp":      time.Now().Add(time.Duration(l.svcCtx.Config.Auth.AccessExpire) * time.Second).Unix(),
+			//自定义 key，可以在 ctx 中获取
+			//value:=l.ctx.Value("custom-key")
 		})
 		tokenString, err := token.SignedString([]byte(l.svcCtx.Config.Auth.AccessSecret))
 		if err != nil {
